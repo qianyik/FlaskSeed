@@ -1,0 +1,30 @@
+#AuthType Shibboleth
+#require valid-user
+#ShibRequireSession on
+
+#<Files api.cgi>
+#    ShibRequireSession off
+#    require shibboleth
+#</Files>
+
+RewriteEngine on
+
+RewriteRule ^static/(.*)$ bootstrap.cgi/static/$1 [L,QSA]
+RewriteRule ^api/(.*)$ bootstrap.cgi/api/$1 [L,QSA]
+#RewriteRule ^admin bootstrap.cgi/admin [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !/404
+RewriteCond %{REQUEST_URI}  !/Shibboleth.sso/
+RewriteRule ^(.*)$ bootstrap.cgi/#/$1  [L,QSA]
+
+RewriteRule ^$ bootstrap.cgi/$1 [L,QSA]
+
+DirectoryIndex bootstrap.cgi
+AddHandler server-parsed .html
+
+Options +FollowSymLinks
+
+AddOutputFilterByType DEFLATE text/html text/plain application/x-javascript text/css text/javascript application/json

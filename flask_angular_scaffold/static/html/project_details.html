@@ -1,0 +1,66 @@
+<div class="container content">
+<h2>
+    <span>Project Title: {{details.project.title}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <button class="btn btn-primary pull-right" ng-click="details.delete_project()">
+        <span class="glyphicon glyphicon-remove"></span>
+        <span>Delete Project</span>
+    </button>
+    <a class="btn btn-primary pull-right" href="edit/{{details.project.id}}">
+        <span class="glyphicon glyphicon-edit"></span>
+        <span>Edit</span>
+    </a>
+</h2>
+<div class="container-fluid col-sm-12 white">
+    <div class="spacer-small"></div>
+</div>
+<div class="col-sm-6">
+    <div class="gray-lighter padding">
+        <span class="h3">Project Details</span>
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="col-sm-6 text-right"><strong>Short Synopsis:</strong></span>
+                <span class="col-sm-6 text-left">{{details.project.short_synopsis}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="col-sm-6 text-right"><strong>Long Synopsis</strong></span>
+                <span class="col-sm-6 text-left">{{details.project.long_synopsis}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="col-sm-6 text-right"><strong>Website:</strong></span>
+                <span class="col-sm-6 text-left">{{details.project.website}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="col-sm-6 text-right"><strong>Location:</strong></span>
+                <span class="col-sm-6 text-left">{{details.project.location}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="col-sm-6 text-right"><strong>Organization:</strong></span>
+                <span class="col-sm-6 text-left">{{details.project.organization}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="col-sm-6 text-right"><strong>Created At:</strong></span>
+                <span class="col-sm-6 text-left">{{details.project.created}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <span class="col-sm-6 text-right"><strong>Last Modified:</strong></span>
+                <span class="col-sm-6 text-left">{{details.project.modified}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid col-sm-12 white">
+        <div class="spacer-small"></div>
+    </div>
+</div>
+</div>

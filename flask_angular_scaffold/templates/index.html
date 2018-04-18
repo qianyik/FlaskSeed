@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" ng-app="fas">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-resource.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+	<script src="https://cdn.rawgit.com/esvit/ng-table/1.0.0/dist/ng-table.js"></script>
+    <script src="{{url_for('static', filename='js/app.module.js')}}"></script>
+    <script src="{{url_for('static', filename='js/app.config.js')}}"></script>
+    <script src="{{url_for('static', filename='js/app.factories.js')}}"></script>
+    <script src="{{url_for('static', filename='js/controllers/list.projects.controller.js')}}"></script>
+    <script src="{{url_for('static', filename='js/controllers/add.project.controller.js')}}"></script>
+    <script src="{{url_for('static', filename='js/controllers/edit.project.controller.js')}}"></script>
+    <script src="{{url_for('static', filename='js/controllers/project.details.controller.js')}}"></script>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/esvit/ng-table/1.0.0/dist/ng-table.min.css">
+	<link rel='stylesheet' href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+	<link rel='stylesheet' href="{{url_for('static', filename='css/style.css')}}">
+    <title>Flask-Angular-Scaffold</title>
+    <base href="{{ url_for('main.index') }}">
+	<script>
+	// Set base URL for later static javascript
+    var base_url = {{ url_for('main.index') }};
+    </script>
+</head>
+<body>
+{% include 'menu.html' %}
+<div id="main" ng-view>
+</div>
+<footer>
+	<div class="container">
+		<div>
+			<ul class="list-inline col-md-6">
+				<li><a href="docs" target="_blank">About This Site</a></li>
+				<li><a href="http://www.ufl.edu/disability/" target="_blank">Disability Services</a></li>
+				<li><a href="http://privacy.ufl.edu/privacystatement.html" target="_blank">Privacy Policy</a></li>
+				<li><a href="mailto:apg-support@at.ufl.edu">Support</a></li>
+				<li><a href="/Shibboleth.sso/Logout" target="_self">Logout</a></li>
+			</ul>
+			<div class="col-md-6 hidden-xs hidden-sm">
+				<span>&copy;2017</span> <a href="http://www.ufl.edu/">University of Florida</a>, Gainesville, FL 32611; (352) 392-3261</li>
+			</div>
+		</div>
+	</div>
+</footer>
+</body>

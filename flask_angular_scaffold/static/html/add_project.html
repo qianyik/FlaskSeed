@@ -1,0 +1,48 @@
+<div class="container content">
+<h2>Create Project</h2>
+<div class="text-center">
+<div class="container-fluid col-sm-12">
+    <div class="spacer-small"></div>
+</div>
+<div class="container-fluid col-sm-12">
+    <div class="spacer-small"></div>
+</div>
+</div>
+<div class="col-sm-4">
+<h3>New Project</h3>
+<form name="new_project_form">
+    <div class="form-group">
+        <label for="title" class="control-label">Title</label>
+        <input type="text" class="form-control" id="title"
+            ng-model="add.title">
+    </div>
+    <div class="form-group">
+        <label for="short_syn" class="control-label">Short Synopsis</label>
+        <input type="text" class="form-control" id="short_syn"
+            ng-model="add.short_syn">
+    </div>
+    <div class="form-group">
+        <label for="long_syn" class="control-label">Long Synopsis</label>
+        <textarea class="form-control" id="long_syn" ng-model="add.long_syn"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="website" class="control-label">Website</label>
+        <input type="text" class="form-control" id="website" ng-model="add.website">
+    </div>
+    <div class="form-group">
+        <label for="loc" class="control-label">Location</label>
+        <input type="text" class="form-control" id="loc" ng-model="add.loc">
+    </div>
+    <div class="form-group">
+        <label for="organization" class="control-label">Organization</label>
+        <input type="text" class="form-control" id="organization" ng-model="add.organization">
+    </div>
+
+    <button type="submit" class="btn btn-primary" ng-click="add.create_project()">
+        <span class="glyphicon glyphicon-plus"></span>
+        Add New Project
+    </button>
+</form>
+</div>
+</div>

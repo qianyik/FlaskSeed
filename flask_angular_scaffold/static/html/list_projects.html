@@ -1,0 +1,44 @@
+<div class="container content">
+<h2 class="form-inline">
+    <span>Projects</span>
+    <div class="form-group pull-right">
+        <div class="input-group">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-search"></span>
+            </div>
+            <input type="text" tooltip="Search Incidents" ng-change="list.data_filter()"
+                class="form-control" ng-model="list.search_term" placeholder="Search"/>
+        </div>
+    </div>
+</h2>
+<div class="table-responsive">
+<table ng-table="list.table_params" class="table table-hover table-condensed">
+    <tr ng-repeat="project in $data"
+        class="text-center" ng-if="list.projects.total_record_count != 0">
+        <td data-title="'Project ID'" sortable="'project_id'">
+            {{ project.id }}
+        </td>
+        <td data-title="'Project Title'" sortable="'project_title'">
+            {{ project.title }}
+        </td>
+        <td data-title="'Project Synopsis'" sortable="'project_Synopsis'">
+            {{ project.short_synopsis }}
+        </td>
+        <td data-title="'Date Created'" sortable="'created_timestamp'">
+            {{ project.created }}
+        </td>
+        <td class="text-right">
+            <a class="btn" tooltip="Details" href="details/{{project.id}}">
+                <span class="glyphicon glyphicon-info-sign"></span>
+            </a>
+            <a class="btn" tooltip="Edit" href="edit/{{project.id}}">
+                <span class="glyphicon glyphicon-edit"></span>
+            </a>
+        </td>
+    </tr>
+    <tr ng-if="$data.length == 0">
+        <td colspan="2">No projects found.<td>
+    </tr>
+</table>
+</div>
+</div>

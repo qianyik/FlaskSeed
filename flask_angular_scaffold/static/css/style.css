@@ -1,0 +1,167 @@
+/*-  COLOR PALETTE
+----------------------------------------------------------------------*/
+.white          {background-color: #fff;}
+.gray-darker    {background-color: #222;}
+.gray-dark      {background-color: #333;}
+.gray           {background-color: #555;}
+.gray-light     {background-color: #777;}
+.gray-lighter   {background-color: #eee;}
+.blue           {background-color: #5789b7;}
+.orange         {background-color: #e17f35;}        
+.red            {background-color: #a94442;}
+
+.red-text    {color: #a94442;}
+.white-text    {color: #FFFFFF;}
+
+/* Spacers */
+.spacer-small {
+    height: 30px;
+}
+
+.spacer-xssmall {
+    height: 15px;
+}
+
+.spacer-large {
+    height: 150px;
+}
+
+/* Overwrites */
+.ng-table th {
+    text-align: inherit;
+}
+
+.ng-table-counts {
+    margin: 20px 0px;
+}
+
+/* Custom Styles */
+
+body {
+    margin-top: 50px;
+    margin-bottom: 125px;
+    background: blue;
+}
+
+body.index {
+    background-color: white;
+    background-attachment: fixed;
+    background-position-y: 50px;
+}
+
+header { 
+    background-color: #6c9ac3;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 50px;
+    color: white;
+    z-index: 9999;
+    text-align: center;
+}
+
+footer {
+    border-top: 10px solid #e17f35;
+    background-color: white;
+    position: fixed;
+    left: 0px;
+    bottom:0px;
+    height: 60px;
+    width: 100%;
+    padding-top: 1em;
+    z-index: 9999;
+}
+
+.logout-button {
+    margin: 0.5em 1em;
+    float: right !important;
+}
+
+.padding {
+    padding: 1em;
+}
+
+.margin-top {
+    margin-top: 2em;
+}
+
+.float-reset {
+    float: inherit;
+}
+
+.uf-header-logo {
+    left: 25px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background: url('../images/logo2.png') top left no-repeat;
+}
+
+.uf-header-name {
+    font-size: 150%;
+    line-height: 2em;
+}
+
+.doc_pic {
+    height: 540px;
+    width: 960px;
+}
+
+.content {
+    padding: 0 1.5em 1.5em 1.5em;
+    margin-bottom: 2em;
+    background-color: white;
+}
+
+.error-block {
+    border-radius: 4px;
+    background-color: #fbb;
+    padding:4px;
+    color:#800;
+}
+
+.datepicker {
+    display: inline-block;
+    min-height: 290px;
+}
+
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}
+
+.ng-enter {
+    animation: slide_in 0.75s both ease-in;
+}
+
+.ng-leave {
+    animation: slide_out 0.75s both ease-in;
+}
+
+@media screen and (min-width: 768px) {
+    .uf-header-name {
+        margin-left: 175px;
+    }
+    header {
+        text-align: left;
+    }
+    .content {
+        margin-top: 10em;
+        margin-bottom: 5em;
+    }
+}
+
+
+/* ANIMATIONS
+=============================================*/
+
+/* entering animations */
+@keyframes slide_in {
+    from    { transform: translateX(100%); }
+    to      { transform: translateX(0); }
+}
+
+/* leaving animations */
+@keyframes slide_out {
+    to  {transform: translateX(-100%); }
+}
