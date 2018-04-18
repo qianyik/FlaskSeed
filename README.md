@@ -27,7 +27,7 @@ NOTE: Make sure you use --system-site-packages when installing the virtualenv
 ## Cloning Project
 ```
 cd ~/source/
-git clone cnswww-gogs.erp@glint.osg.ufl.edu:saiedk/flask_angular_scaffold.git <your_app_name>
+git clone <git_repo>
 cd <your_app_name>
 mv flask_angular_scaffold <your_app_name>
 ```
@@ -225,7 +225,7 @@ KeyError: 'SERVER_NAME'
 then you can try in your browser to see if it will launch.
 URL will be something like:
 ```
-http://<your_gator_link>.dev-services-sb.erp.ufl.edu/<your_app_name>/
+http://<Server_IP_Address>/<your_app_name>/
 ```
 The url is going to your `~/public_html/<your_app_name>/bootstrap.cgi (or fcgi)`
 so if you named the directory inside the public html differently then `<your_app_name>` then you will use that.
